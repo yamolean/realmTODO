@@ -23,10 +23,10 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.register(ToDoCell.self, forCellReuseIdentifier:  "cellID")
-//        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ToDoCell.self, forCellReuseIdentifier:  "cellID")
+        
         //input,Realmデータベースに登録されているデータを全て取得
         itemList = realm.objects(ToDoEntity.self)
     }
@@ -49,12 +49,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! ToDoCell
+        let cellItem = itemList[indexPath.row]
+        cell.Label.text = cellItem.Text
         return cell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! ToDoCell
-//        let cellItem = itemList[indexPath.row]
-//        cell.Label.text = cellItem.Text
-//        return cell
     }
     
     
