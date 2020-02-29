@@ -3,20 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185595EA240A7888009122D1 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185595E8240A7888009122D1 /* ToDoCell.swift */; };
+		185595EB240A7888009122D1 /* ToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185595E9240A7888009122D1 /* ToDoCell.xib */; };
 		185AC080240A511800EE256B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AC07F240A511800EE256B /* AppDelegate.swift */; };
 		185AC082240A511800EE256B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AC081240A511800EE256B /* SceneDelegate.swift */; };
 		185AC084240A511800EE256B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AC083240A511800EE256B /* ViewController.swift */; };
 		185AC087240A511800EE256B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185AC085240A511800EE256B /* Main.storyboard */; };
 		185AC089240A511D00EE256B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185AC088240A511D00EE256B /* Assets.xcassets */; };
 		185AC08C240A511D00EE256B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185AC08A240A511D00EE256B /* LaunchScreen.storyboard */; };
+		185AC0B6240A730700EE256B /* ToDoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185AC0B5240A730700EE256B /* ToDoEntity.swift */; };
 		CE665B402853454456BF15E7 /* Pods_realmPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBAA45830AC154CAF945267 /* Pods_realmPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185595E8240A7888009122D1 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		185595E9240A7888009122D1 /* ToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCell.xib; sourceTree = "<group>"; };
 		185AC07C240A511800EE256B /* realmPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realmPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185AC07F240A511800EE256B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185AC081240A511800EE256B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +30,7 @@
 		185AC088240A511D00EE256B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185AC08B240A511D00EE256B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185AC08D240A511D00EE256B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185AC0B5240A730700EE256B /* ToDoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoEntity.swift; sourceTree = "<group>"; };
 		BBBAA45830AC154CAF945267 /* Pods_realmPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realmPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A921EA707B301E845CFB37 /* Pods-realmPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realmPractice.release.xcconfig"; path = "Target Support Files/Pods-realmPractice/Pods-realmPractice.release.xcconfig"; sourceTree = "<group>"; };
 		EA2E41F9D5B0AD4980D10524 /* Pods-realmPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realmPractice.debug.xcconfig"; path = "Target Support Files/Pods-realmPractice/Pods-realmPractice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185595E5240A7836009122D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				185595E8240A7888009122D1 /* ToDoCell.swift */,
+				185595E9240A7888009122D1 /* ToDoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		185AC073240A511800EE256B = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +80,9 @@
 			children = (
 				185AC07F240A511800EE256B /* AppDelegate.swift */,
 				185AC081240A511800EE256B /* SceneDelegate.swift */,
-				185AC083240A511800EE256B /* ViewController.swift */,
+				185AC0B7240A730B00EE256B /* Model */,
+				185AC0B8240A731800EE256B /* ViewController */,
+				185595E5240A7836009122D1 /* View */,
 				185AC085240A511800EE256B /* Main.storyboard */,
 				185AC088240A511D00EE256B /* Assets.xcassets */,
 				185AC08A240A511D00EE256B /* LaunchScreen.storyboard */,
@@ -74,13 +91,28 @@
 			path = realmPractice;
 			sourceTree = "<group>";
 		};
+		185AC0B7240A730B00EE256B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185AC0B5240A730700EE256B /* ToDoEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185AC0B8240A731800EE256B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185AC083240A511800EE256B /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		5F8B86DEAC3EBA6D8D84840F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EA2E41F9D5B0AD4980D10524 /* Pods-realmPractice.debug.xcconfig */,
 				D2A921EA707B301E845CFB37 /* Pods-realmPractice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,6 +187,7 @@
 				185AC08C240A511D00EE256B /* LaunchScreen.storyboard in Resources */,
 				185AC089240A511D00EE256B /* Assets.xcassets in Resources */,
 				185AC087240A511800EE256B /* Main.storyboard in Resources */,
+				185595EB240A7888009122D1 /* ToDoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +242,9 @@
 			files = (
 				185AC084240A511800EE256B /* ViewController.swift in Sources */,
 				185AC080240A511800EE256B /* AppDelegate.swift in Sources */,
+				185AC0B6240A730700EE256B /* ToDoEntity.swift in Sources */,
 				185AC082240A511800EE256B /* SceneDelegate.swift in Sources */,
+				185595EA240A7888009122D1 /* ToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

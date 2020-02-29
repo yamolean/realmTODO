@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="realmPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODO:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94W-OJ-s5Q">
+                                <rect key="frame" x="32" y="68" width="52" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="v9n-ne-WCi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwb-Hb-LEC">
+                                <rect key="frame" x="334" y="148" width="48" height="48"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.80000000000000004" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="A5U-Yo-l6g"/>
+                                    <constraint firstAttribute="height" constant="48" id="Qib-ol-c1n"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfh-G3-nM8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hr5-UW-jiH">
+                                <rect key="frame" x="100" y="76" width="282" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="sTi-Er-5Oq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMi-Xu-DxK">
+                                <rect key="frame" x="0.0" y="220" width="414" height="676"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hr5-UW-jiH" firstAttribute="centerY" secondItem="94W-OJ-s5Q" secondAttribute="centerY" id="562-SF-iaR"/>
+                            <constraint firstItem="Jwb-Hb-LEC" firstAttribute="trailing" secondItem="hr5-UW-jiH" secondAttribute="trailing" id="9BU-Ve-2Or"/>
+                            <constraint firstItem="94W-OJ-s5Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ANd-uf-wTy"/>
+                            <constraint firstItem="bMi-Xu-DxK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dlj-Nc-p3k"/>
+                            <constraint firstItem="bMi-Xu-DxK" firstAttribute="top" secondItem="Jwb-Hb-LEC" secondAttribute="bottom" constant="24" id="Ewt-mM-8Gm"/>
+                            <constraint firstItem="94W-OJ-s5Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="VNY-dM-ro1"/>
+                            <constraint firstItem="Jwb-Hb-LEC" firstAttribute="top" secondItem="hr5-UW-jiH" secondAttribute="bottom" constant="24" id="ZNK-C1-dQh"/>
+                            <constraint firstAttribute="bottom" secondItem="bMi-Xu-DxK" secondAttribute="bottom" id="ZTo-ge-FDN"/>
+                            <constraint firstItem="bMi-Xu-DxK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gsZ-gJ-nxT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hr5-UW-jiH" secondAttribute="trailing" constant="32" id="riV-wF-KIP"/>
+                            <constraint firstItem="hr5-UW-jiH" firstAttribute="leading" secondItem="94W-OJ-s5Q" secondAttribute="trailing" constant="16" id="sYM-Ki-mAr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="Jwb-Hb-LEC" id="gaZ-0K-vHS"/>
+                        <outlet property="tableView" destination="bMi-Xu-DxK" id="c8a-gc-WOg"/>
+                        <outlet property="textField" destination="hr5-UW-jiH" id="78f-ix-0h5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
     </scenes>
 </document>
